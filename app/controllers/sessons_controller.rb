@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
       session[:teacher_id] = teacher.id
       redirect_to root_path
     else
-      @message = "Sorry, we had some errors..."
+      @message = "Sorry, either your email or password was incorrect, please try again"
       render :new
     end
 
