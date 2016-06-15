@@ -5,7 +5,7 @@ class CreateStudents < ActiveRecord::Migration
       t.string :last_name
       t.integer :age
       t.integer :grade
-      t.integer :gpa
+      t.decimal :gpa
       t.integer :disciplinary_strikes
       t.integer :teacher_id
       t.string :shirt_size
