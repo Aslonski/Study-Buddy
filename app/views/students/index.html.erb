@@ -1,7 +1,12 @@
 <h2>All Students</h2>
+<section>
+  <table><% @students.each do |student| %>
+    <%= render "student_list", locals: { student: student } %>
+  <% end %></table>
+</section>
 
-<table><% @students.each do |student| %>
-  <%= render "student_list", locals: { student: student } %>
-<% end %></table>
-
-<%= if @user.admin? %>
+<% if current_user.admin %>
+  <div>
+    <%= link_to "Add Student", new_student_path %>
+  </div>
+<% end %>
