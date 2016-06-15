@@ -25,7 +25,7 @@ A database for teachers to track students.
   * I want to add/edit/delete student records.
 * As any user... 
   * I want to be able to login.
-*Stretch:
+* Stretch:
   * As an admin, I can convert a teacher to another admin.
   * As an admin, I want to import a CSV.
   * As a teacher, I want to add multiple students at once.
