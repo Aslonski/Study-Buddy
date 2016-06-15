@@ -1,0 +1,7 @@
+<h2>All Students</h2>
+
+<table><% @students.each do |student| %>
+  <%= render "student_list", locals: { student: student } %>
+<% end %></table>
+
+<%= if @user.admin? %>
