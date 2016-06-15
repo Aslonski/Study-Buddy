@@ -15,7 +15,7 @@ class SessionsController < ApplicationController
 
   def destroy
     session.clear
-    redirect_to "sessions#new"
+    redirect_to new_sessions_path
   end
 
   private
