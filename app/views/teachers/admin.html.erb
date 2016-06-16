@@ -1,18 +1,10 @@
 <div class="main-section" id="student-info">
   <h2>Invite New Teacher</h2>
 
-  <%= form_for @teacher, url: {action: "create"} do |f| %>
-    <div class="field">
-      <%= f.label :name %><br>
-      <%= f.text_field :name %>
-    </div>
-    <div class="field">
-      <%= f.label :email %><br>
-      <%= f.email_field :email %>
-    </div>
-    <div class="actions">
-      <%= f.submit %>
-    </div>
-  <% end %>
+  <%= render "teachers/form" %>
+
+  <h2>Add New Student</h2>
+
+  <%= render "students/form" %>
 
 </div>
