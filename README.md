@@ -1,3 +1,4 @@
+![Travis Badge](https://travis-ci.org/Aslonski/Study-Buddy.svg?branch=master)
 # StudyBuddy
 A database for teachers to track students.
 
