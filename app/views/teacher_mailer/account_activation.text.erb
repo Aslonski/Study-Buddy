@@ -1,0 +1,3 @@
+Hi, <%= teacher.name %>, welcome to Study Buddy! Click on the link below to activate your account.
+
+<%= edit_teacher_url(@teacher.activation_token, email: @teacher.email) %>
