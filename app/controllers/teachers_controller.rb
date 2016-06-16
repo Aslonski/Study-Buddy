@@ -19,6 +19,8 @@ class TeachersController < ApplicationController
   def create
     @teacher = Teacher.new(teacher_params)
     if @teacher.save
+      TeacherMailer.account_activation(@teacher).deliver_now
+      flash[:info] = "Check your email to activate your account"
       redirect_to root_path
     else
       render "new"

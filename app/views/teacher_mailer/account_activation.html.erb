@@ -1,0 +1,5 @@
+<h1>Hi, <%= teacher.name %>, welcome to Study Buddy!</h1>
+
+<p>Use the link below to activate your account.</p>
+
+<p><%= link_to "Click here to activate!", edit_teacher_url(@teacher.activation_token, email: @teacher.email) %></p>
