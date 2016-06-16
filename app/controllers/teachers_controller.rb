@@ -1,5 +1,4 @@
 class TeachersController < ApplicationController
-include 'ApplicationHelper'
 
   def index
     @teachers = Teacher.all
