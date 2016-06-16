@@ -18,6 +18,7 @@ class TeachersController < ApplicationController
 
   def create
     @teacher = Teacher.new(teacher_params)
+    @teacher.password = "temp"
     if @teacher.save
       redirect_to root_path
     else
@@ -38,6 +39,12 @@ class TeachersController < ApplicationController
     @teacher = find_teacher
     @teacher.destroy
     redirect_to root_path
+  end
+
+  def admin
+    @teacher = Teacher.new
+    @student = Student.new
+    render "admin"
   end
 
   private
