@@ -18,6 +18,8 @@ class TeachersController < ApplicationController
 
   def create
     @teacher = Teacher.new(teacher_params)
+      p "ABOUT TO SAVE"
+      p @teacher
     @teacher.password = "temp"
     if @teacher.save
       p "============="
