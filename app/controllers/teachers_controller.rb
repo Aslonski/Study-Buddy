@@ -21,7 +21,6 @@ class TeachersController < ApplicationController
     @teacher.password = "temp"
     if @teacher.save
       TeacherMailer.account_activation(@teacher).deliver_now
-      flash[:info] = "Check your email to activate your account"
       redirect_to root_path
     else
       render "new"
