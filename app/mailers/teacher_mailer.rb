@@ -1,5 +1,5 @@
 class TeacherMailer < ApplicationMailer
-  def self.account_activation(teacher)
+  def account_activation(teacher)
     p "========="
     p teacher
     p "SENDING EMAIL"
