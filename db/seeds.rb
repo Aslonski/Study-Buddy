@@ -26,6 +26,12 @@ end
 
 
 Teacher.create!(
+ name: "Danny",
+ email: "jill@jill.jill",
+ password: "password",
+ admin: true)
+
+Teacher.create!(
  name: Faker::Name.first_name,
  email: Faker::Internet.email,
  password: "password",
@@ -35,5 +41,8 @@ Teacher.create!(
  name: Faker::Name.first_name,
  email: Faker::Internet.email,
  password: "password",
+<<<<<<< HEAD
  activated: false,
+=======
+>>>>>>> fbfd7effc15e25e22c985e4ef3ab6b7402cfd510
  admin: false)
