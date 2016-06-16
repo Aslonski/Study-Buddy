@@ -22,12 +22,12 @@ ActiveRecord::Schema.define(version: 20160615205418) do
     t.integer  "age"
     t.integer  "grade"
     t.decimal  "gpa"
-    t.integer  "disciplinary_strikes"
+    t.integer  "disciplinary_strikes", default: 0
     t.integer  "teacher_id"
     t.string   "shirt_size"
     t.string   "profile_pic"
-    t.datetime "created_at",           null: false
-    t.datetime "updated_at",           null: false
+    t.datetime "created_at",                       null: false
+    t.datetime "updated_at",                       null: false
   end
 
   create_table "teachers", force: :cascade do |t|
