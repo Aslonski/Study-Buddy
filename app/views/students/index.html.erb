@@ -2,7 +2,7 @@
 <%= form_tag "/students" do %>
   <table><% @students.each do |student| %>
     <tr>
-      <td><%= check_box_tag "student_ids[]", student.id %></td>
+      <td><%= check_box_tag "student_ids[]", student.id, student.teacher == current_teacher %></td>
       <%= render partial: "student_list", locals: { student: student } %>
     </tr>
   <% end %></table>
