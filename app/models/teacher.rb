@@ -1,4 +1,4 @@
-class Teacher < ActiveRecord::Base
+  class Teacher < ActiveRecord::Base
 
   attr_accessor :activation_token
 
