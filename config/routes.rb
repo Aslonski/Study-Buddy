@@ -1,8 +1,13 @@
 Rails.application.routes.draw do
-  resources :students
-  resources :teachers
-  # resources :account_activations, only: [:edit]
   root "sessions#new"
+  resources :students
+
+  # resources :account_activations, only: [:edit]
+
+  put "/students/:id/select" => "students#select", as: :select_student
+  resources :teachers, except: [:update]
+  resources :sessions, only: [:new, :create, :destroy]
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

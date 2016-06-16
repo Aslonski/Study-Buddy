@@ -1,11 +1,14 @@
 class SessionsController < ApplicationController
-  def create
+  def new
 
+  end
+
+  def create
     teacher = Teacher.find_by(email: session_params[:email])
 
     if teacher && teacher.authenticate(session_params[:password])
       session[:teacher_id] = teacher.id
-      redirect_to root_path
+      redirect_to teacher_path(current_teacher.id)
     else
       @message = "Sorry, either your email or password was incorrect, please try again"
       render :new
@@ -15,7 +18,7 @@ class SessionsController < ApplicationController
 
   def destroy
     session.clear
-    redirect_to new_session_path
+    redirect_to root_path
   end
 
   private
