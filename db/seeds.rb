@@ -28,11 +28,12 @@ end
 Teacher.create!(
  name: Faker::Name.first_name,
  email: Faker::Internet.email,
- password_digest: "password",
+ password: "password",
  admin: true)
 
 Teacher.create!(
  name: Faker::Name.first_name,
  email: Faker::Internet.email,
- password_digest: "password",
+ password: "password",
+ activated: false,
  admin: false)

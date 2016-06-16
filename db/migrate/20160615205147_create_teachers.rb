@@ -5,6 +5,8 @@ class CreateTeachers < ActiveRecord::Migration
       t.string :email
       t.string :password_digest
       t.boolean :admin, default: false
+      t.string :activation_digest
+      t.boolean :activated, default: false
 
       t.timestamps null: false
     end
