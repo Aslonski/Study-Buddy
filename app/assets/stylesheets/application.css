@@ -151,3 +151,8 @@ ul {
   border-left: 1px solid #CCCCCC;
 }
 
+#student-info {
+  width: 20%;
+  text-align: left;
+}
+

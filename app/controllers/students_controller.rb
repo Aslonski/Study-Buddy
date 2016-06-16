@@ -24,7 +24,7 @@ class StudentsController < ApplicationController
     else
       @student = Student.new(student_params)
       if @student.save
-        redirect_to root_path
+        redirect_to students_path
       else
         render "new"
       end
@@ -43,19 +43,29 @@ class StudentsController < ApplicationController
   def destroy
     @student = find_student
     @student.destroy
-    redirect_to root_path
+    redirect_to students_path
   end
 
   def select_multiple
     @students = Student.find(params[:student_ids])
-    @students.each { |student| student.teacher = current_teacher }
-    redirect_to root_path
+    @students.each do |student| 
+      student.teacher = current_teacher 
+      student.save
+    end
+    redirect_to teacher_path(id: current_teacher.id)
   end
 
   def delete_multiple
     @students = Student.find(params[:student_ids])
     @students.each { |student| student.destroy }
-    redirect_to root_path
+    redirect_to students_path
+  end
+
+  def select
+    @student = find_student
+    @student.teacher = current_teacher
+    @student.save
+    redirect_to student_path
   end
 
   private
