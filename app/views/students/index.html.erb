@@ -1,16 +1,16 @@
 <h2>All Students</h2>
-<%= form_for @student do |f| %>
+<%= form_tag "/students" do %>
   <table><% @students.each do |student| %>
-    <%= f.check_box "students[]", student.id %>
-    <%= render "student_list", locals: { student: student } %>
+    <tr>
+      <td><%= check_box_tag "student_ids[]", student.id %></td>
+      <%= render partial: "student_list", locals: { student: student } %>
+    </tr>
   <% end %></table>
 
-  <%= f.submit "Select Student(s)" %>
+  <%= submit_tag "Select Student(s)", name: :select %>
 
-  <% if current_user.admin %>
-    <div>
-      <%= f.submit "Delete Student(s)" %>
-    </div>
-  <% end %>
+  <div>
+    <%= submit_tag "Delete Student(s)", name: :delete %>
+  </div>
 
 <% end %>
