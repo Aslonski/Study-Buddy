@@ -1,6 +1,6 @@
 language: ruby
 rvm:
-- 2.0.0p647
+- 2.0.0-p647
 
 bundler_args: --jobs=1
 script:
