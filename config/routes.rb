@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   resources :teachers, except: [:update]
   resources :account_activations, only: [:edit]
   root "students#index"
+  root "sessions#new"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
