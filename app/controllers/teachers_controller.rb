@@ -20,7 +20,7 @@ class TeachersController < ApplicationController
     @teacher = Teacher.new(teacher_params)
       p "ABOUT TO SAVE"
       p @teacher
-    @teacher.password = "temp"
+    # @teacher.password = "temp"
     if @teacher.save
       p "============="
       p @teacher
