@@ -6,6 +6,8 @@ class Student < ActiveRecord::Base
 
    validates :grade, numericality: {only_integer: true}
 
+   validates :age, numericality: {only_integer: true}
+
    validates :gpa, inclusion: { in: 0..4 }
 
 
