@@ -1,9 +1,12 @@
 <section class="header-section">
-  <h1> StudyBuddy </h1>
+  <h1> Study Buddy </h1>
 
   <% if logged_in? %>
     <%= link_to current_teacher.name, teacher_path(current_teacher.id), class: "button" %>
-    <%= link_to "Student list", students_path, class: "button" %>
+    <% if current_teacher.admin %>
+      <%= link_to "Admin", admin_path, class: "button" %>
+    <% end %>
+    <%= link_to "Student List", students_path, class: "button" %>
     <%= link_to "Log Out", session_path(current_teacher.id), class: "button", method: :delete %>
   <% end %>
 </section>
