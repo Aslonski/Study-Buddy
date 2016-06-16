@@ -3,7 +3,7 @@
 <% if @teacher.students.length == 0 %>
   <div>
     <p>Welcome, <%= @teacher.name %>!  You currently have no students.</p>
-    <p>Click <%= link_to 'here', students_path %>to start adding students.</p>
+    <p>Click <%= link_to 'here', students_path %> to start adding students.</p>
   </div>
 <% else %>
   <table>
