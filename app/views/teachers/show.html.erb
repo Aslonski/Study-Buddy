@@ -1,0 +1,23 @@
+<h1><%= @teacher.name %> Students</h1>
+
+<% if @teacher.students.length == nil %>
+  <p>Welcome, <%= @teacher.name %>!  You currently have no students.  Click <%= link_to 'here', students_path %>to start adding students.</p>
+<% else %>
+  <table>
+    <% counter = 1 %>
+    <tr>
+      <th>Student Name</th>
+      <th>Grade Level</th>
+      <th>GPA</th>
+      <th>Discipliary Strikes</th>
+    </tr>
+    <% @teacher.students.each do |student| %>
+      <tr>
+        <td><%= counter %></td>
+        <%= render 'student_list' %>
+      </tr>  
+      <% counter =+ 1 %>
+    <% end %>
+  </table>
+
+<% end %>
