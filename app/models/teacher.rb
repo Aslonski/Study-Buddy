@@ -21,9 +21,14 @@ class Teacher < ActiveRecord::Base
     BCrypt::Password.new(self.activation_digest) == token
   end
 
+
   private
   def Teacher.new_token
     SecureRandom.urlsafe_base64
+  end
+
+  def self.digest(activation_token)
+    BCrypt::Password.create(activation_token)
   end
 
   def create_activation_digest

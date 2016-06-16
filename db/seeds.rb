@@ -35,14 +35,13 @@ Teacher.create!(
  name: Faker::Name.first_name,
  email: Faker::Internet.email,
  password: "password",
- admin: true)
+ admin: true,
+ activation_token: "rHKe_evLxgmY7bYtWh-Usw")
 
 Teacher.create!(
  name: Faker::Name.first_name,
  email: Faker::Internet.email,
  password: "password",
-<<<<<<< HEAD
  activated: false,
-=======
->>>>>>> fbfd7effc15e25e22c985e4ef3ab6b7402cfd510
- admin: false)
+ admin: false,
+ activation_token: "7-yd-1Scy3q7TTxubWnhuQ")
