@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   resources :students
   resources :teachers, except: [:update]
+  resources :sessions, only: [:new, :create, :destroy]
   root "sessions#new"
 
   # The priority is based upon order of creation: first created -> highest priority.
