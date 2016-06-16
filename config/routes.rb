@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   root "sessions#new"
   resources :students
+  put "/students/:id/select" => "students#select", as: :select_student
   resources :teachers, except: [:update]
   resources :sessions, only: [:new, :create, :destroy]
 
