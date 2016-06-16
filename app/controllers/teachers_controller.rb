@@ -32,7 +32,7 @@ include 'ApplicationHelper'
     @teacher = Teacher.find_by(email: params[:email])
     if @teacher && teacher.email_authenticated?(params[:id])
       if @teacher.activated?
-        @teacher.update_attribute(activation_digest: "")
+        @teacher.update(activation_digest: "")
         redirect_to root_path
       else
         flash[:warning] = "Account not activated.  Please contact your administrator."
