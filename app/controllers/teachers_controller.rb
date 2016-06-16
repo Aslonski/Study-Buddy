@@ -1,4 +1,5 @@
 class TeachersController < ApplicationController
+include 'ApplicationHelper'
 
   def index
     @teachers = Teacher.all
@@ -19,6 +20,8 @@ class TeachersController < ApplicationController
   def create
     @teacher = Teacher.new(teacher_params)
     if @teacher.save
+      TeacherMailer.account_activation(@teacher).deliver_now
+      flash[:info] = "Check your email to activate your account"
       redirect_to root_path
     else
       render "new"
@@ -26,12 +29,24 @@ class TeachersController < ApplicationController
   end
 
   def update
-    @teacher = find_teacher
-    if @teacher.update(teacher_params)
-      redirect_to teacher_path
+    @teacher = Teacher.find_by(email: params[:email])
+    if @teacher && teacher.email_authenticated?(params[:id])
+      if @teacher.activated?
+        @teacher.update(activation_digest: "")
+        redirect_to root_path
+      else
+        flash[:warning] = "Account not activated.  Please contact your administrator."
+        redirect_to root_path
+      end
     else
-      render "edit"
+      redirect_to root_path
     end
+
+    # if @teacher.update(teacher_params)
+    #   redirect_to teacher_path
+    # else
+    #   render "edit"
+    # end
   end
 
   def destroy
