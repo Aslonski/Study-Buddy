@@ -19,10 +19,8 @@ class StudentsController < ApplicationController
   def create
     if params[:select]
       select_multiple
-      redirect_to root_path
     elsif params[:delete] 
       delete_multiple
-      redirect_to root_path
     else
       @student = Student.new(student_params)
       if @student.save
@@ -51,11 +49,13 @@ class StudentsController < ApplicationController
   def select_multiple
     @students = Student.find(params[:student_ids])
     @students.each { |student| student.teacher = current_teacher }
+    redirect_to root_path
   end
 
   def delete_multiple
     @students = Student.find(params[:student_ids])
     @students.each { |student| student.destroy }
+    redirect_to root_path
   end
 
   private

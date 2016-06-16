@@ -9,8 +9,10 @@
 
   <%= submit_tag "Select Student(s)", name: :select %>
 
-  <div>
-    <%= submit_tag "Delete Student(s)", name: :delete %>
-  </div>
+  <%= if current_teacher.admin %>
+    <div>
+      <%= submit_tag "Delete Student(s)", name: :delete %>
+    </div>
+  <% end %>
 
 <% end %>
