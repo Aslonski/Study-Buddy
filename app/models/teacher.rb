@@ -1,6 +1,6 @@
-class Teacher < ActiveRecord::Base
+  class Teacher < ActiveRecord::Base
 
-  attr_accessor :activation_token
+  attr_accessor :activation_token, :activation_digest
 
   before_create :create_activation_digest
 
