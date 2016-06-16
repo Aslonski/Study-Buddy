@@ -10,7 +10,8 @@ feature "Visiting the homepage" do
     fill_in "Password", :with => "password"
     click_button "Login"
 
-    expect(page).to have_text("Welcome Danny")
+    expect(page).to have_text("Danny")
+    expect(page).to have_text("Log Out")
     end
   end
 
