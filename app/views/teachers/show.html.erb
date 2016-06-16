@@ -12,14 +12,14 @@
       <th>Student Name</th>
       <th>Grade Level</th>
       <th>GPA</th>
-      <th>Discipliary Strikes</th>
+      <th>Disciplinary Strikes</th>
     </tr>
     <% @teacher.students.each do |student| %>
       <tr>
         <td><%= counter %></td>
         <%= render 'student_list' %>
       </tr>  
-      <% counter =+ 1 %>
+      <% counter += 1 %>
     <% end %>
   </table>
 <% end %>
