@@ -1,4 +1,8 @@
 class SessionsController < ApplicationController
+  def new
+    
+  end 
+
   def create
 
     teacher = Teacher.find_by(email: session_params[:email])
