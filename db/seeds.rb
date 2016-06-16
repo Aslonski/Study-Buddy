@@ -24,11 +24,15 @@ Teacher.destroy_all
   )
 end
 
-2.times do
-  Teacher.create!(
-   name: Faker::Name.first_name,
-   email: Faker::Internet.email,
-   password_digest: "password",
-   admin: Faker::Boolean.boolean(0.2)
-    )
-end
+
+Teacher.create!(
+ name: Faker::Name.first_name,
+ email: Faker::Internet.email,
+ password_digest: "password",
+ admin: true)
+
+Teacher.create!(
+ name: Faker::Name.first_name,
+ email: Faker::Internet.email,
+ password_digest: "password",
+ admin: false)

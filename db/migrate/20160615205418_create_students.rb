@@ -6,7 +6,7 @@ class CreateStudents < ActiveRecord::Migration
       t.integer :age
       t.integer :grade
       t.decimal :gpa
-      t.integer :disciplinary_strikes
+      t.integer :disciplinary_strikes, default: 0
       t.integer :teacher_id
       t.string :shirt_size
       t.string :profile_pic
