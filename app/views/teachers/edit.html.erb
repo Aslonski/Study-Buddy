@@ -29,11 +29,10 @@
     <div class="actions">
       <%= f.submit class: "button" %>
     </div>
-
-    <% if current_teacher.admin %>
-      <div>
-        <%= f.submit "Delete Teacher", method: :delete, name: :delete, class: "button" %>
-      </div>
-    <% end %>
+  <% end %>
+  <% if current_teacher.admin %>
+    <div>
+      <%= link_to "Delete Teacher", teacher_path, method: :delete, name: :delete, class: "button" %>
+    </div>
   <% end %>
 </section>

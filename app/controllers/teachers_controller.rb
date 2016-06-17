@@ -39,7 +39,7 @@ class TeachersController < ApplicationController
   def destroy
     @teacher = find_teacher
     @teacher.destroy
-    redirect_to root_path
+    redirect_to teachers_path
   end
 
   def admin
