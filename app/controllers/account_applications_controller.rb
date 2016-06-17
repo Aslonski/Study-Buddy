@@ -8,7 +8,7 @@ class AccountApplicationsController < ActionController::Base
     if @teacher && teacher.email_authenticated?(params[:id])
       @teacher.update(activated: true)
       if @teacher.activated?
-        @teacher.update(activation_digest: "")
+        @teacher.update(activation_digest: "", password: account_params[:password])
         redirect_to root_path
       else
         flash[:warning] = "Account not activated.  Please contact your administrator."
@@ -17,5 +17,11 @@ class AccountApplicationsController < ActionController::Base
     else
       redirect_to root_path
     end
+  end
+
+  private
+
+  def account_params
+    params.require(:teacher).permit(:password)
   end
 end
