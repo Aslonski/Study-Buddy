@@ -5,7 +5,7 @@
     <%= link_to "Edit Profile", edit_teacher_path, class: "button" %><br><br>
   <% end %>
 
-  <% if @teacher.students.length == 0 %>
+  <% if @teacher == current_teacher && @teacher.students.length == 0 %>
     <div>
       <p>Welcome, <%= @teacher.name %>!  You currently have no students.</p>
       <p>Click <%= link_to 'here', students_path %> to start adding students.</p>
