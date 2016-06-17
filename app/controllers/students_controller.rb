@@ -74,6 +74,11 @@ class StudentsController < ApplicationController
     redirect_to student_path
   end
 
+  def import
+    Student.import(params[:file])
+    redirect_to students_path, notice: "Students imported." 
+  end
+
   private
 
   def find_student

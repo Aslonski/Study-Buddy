@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   resources :teachers, except: [:update]
   resources :sessions, only: [:new, :create, :destroy]
   get "/admin" => "teachers#admin", as: :admin
-
+  post "/import" => "students#import", as: :import_students
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
