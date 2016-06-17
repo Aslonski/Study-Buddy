@@ -1,0 +1,19 @@
+<%= form_tag "/students", method: :delete do %>
+  <table>
+      <th></th>
+      <th>Student Name</th>
+      <th>Grade Level</th>
+      <th>GPA</th>
+      <th>Disciplinary Strikes</th>
+  <% students.each do |student| %>
+    <tr>
+      <td><%= check_box_tag "student_ids[]", student.id, false %></td>
+      <%= render partial: "student_list", locals: { student: student } %>
+    </tr>
+  <% end %></table>
+
+  <div>
+    <%= submit_tag "Delete Student(s)", name: :delete_multiple, class: "button" %>
+  </div>
+
+<% end %>

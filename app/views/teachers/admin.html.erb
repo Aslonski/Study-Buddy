@@ -6,9 +6,13 @@
   <h2>Import Students</h2>
 
   <%= form_tag import_students_path, multipart: true do %>
-    <%= file_field_tag :file %>
-    <%= submit_tag "Import", class: "button" %>
+    <%= file_field_tag :file%>
+    <%= submit_tag "Import CSV", class: "button" %>
   <% end %>
+
+  <h2>Delete Multiple Students</h2>
+
+  <%= render partial: "students/delete", locals: { students: Student.all } %>
 
   <h2>Add New Student</h2>
 
