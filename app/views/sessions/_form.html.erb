@@ -1,3 +1,4 @@
+<!-- <section class="user-section"> -->
 <%= form_tag sessions_path do %>
 
   <% if @message %>
@@ -7,10 +8,14 @@
   <% end %>
 
   <%= label_tag :email %>
+  
   <%= text_field_tag :email, params[:email] %>
+  <br>
 
   <%= label_tag :password %>
   <%= password_field_tag :password %>
+  <br>
 
-  <%= submit_tag "Login", class: "btn btn-login" %>
+  <%= submit_tag "Login", class: "button" %>
 <% end %>
+<!-- </section> -->
