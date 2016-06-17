@@ -1,0 +1,7 @@
+<td><%= link_to teacher.name, teacher_path(teacher) %></td>
+<td><%= teacher.email %></td>
+<% if teacher.admin %>
+  <td>Yes</td>
+<% else %>
+  <td>No</td>
+<% end %>
