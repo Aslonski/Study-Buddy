@@ -1,12 +1,15 @@
 Rails.application.routes.draw do
   root "sessions#new"
   resources :students
+
   put "/students" => "students#select_multiple"
   delete "/students" => "students#delete_multiple"
   # resources :account_activations, only: [:edit]
+  resources :account_activations, only: [:edit, :update]
+
 
   put "/students/:id/select" => "students#select", as: :select_student
-  resources :teachers, except: [:update]
+  resources :teachers
   resources :sessions, only: [:new, :create, :destroy]
   get "/admin" => "teachers#admin", as: :admin
   post "/import" => "students#import", as: :import_students

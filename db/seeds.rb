@@ -30,21 +30,21 @@ Teacher.create!(
  email: "jill@jill.jill",
  password: "password",
  admin: true,
- activated: true,
- activation_token: "7S2yXRcG6tT3yDTF39r0JQ")
+ activated: true
+ )
 
 Teacher.create!(
  name: Faker::Name.first_name,
  email: Faker::Internet.email,
  password: "password",
  activated: true,
- admin: true,
- activation_token: "rHKe_evLxgmY7bYtWh-Usw")
+ admin: true
+)
 
 Teacher.create!(
  name: Faker::Name.first_name,
  email: Faker::Internet.email,
  password: "password",
  activated: true,
- admin: false,
- activation_token: "7-yd-1Scy3q7TTxubWnhuQ")
+ admin: false
+ )
