@@ -37,9 +37,6 @@ gem 'faker'
 # Windows
 gem "tzinfo-data"
 
-# CSV
-gem "roo"
-
 group :development, :test do
   gem 'rspec-rails', '~> 3.4'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
