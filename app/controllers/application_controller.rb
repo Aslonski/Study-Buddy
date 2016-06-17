@@ -7,5 +7,4 @@ class ApplicationController < ActionController::Base
 
   before_action :check_logged_in, except: [:new, :create]
 
-
 end

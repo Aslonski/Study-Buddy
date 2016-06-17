@@ -1,5 +1,7 @@
 class StudentsController < ApplicationController
 
+  before_action :check_admin, only: [:edit, :create, :destroy, :admin]
+
   def index
     @students = Student.sort(Student.all)
   end
