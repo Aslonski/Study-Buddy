@@ -10,6 +10,7 @@
       <%= link_to "Admin", admin_path, class: "button" %>
     <% end %>
     <%= link_to "Student List", students_path, class: "button" %>
+    <%= link_to "Teacher List", teachers_path, class: "button" %>
     <%= link_to "Log Out", session_path(current_teacher.id), class: "button", method: :delete %>
   <% end %>
 </section>
