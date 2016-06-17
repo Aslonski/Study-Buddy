@@ -1,5 +1,8 @@
 <section class="header-section">
-  <h1> Study Buddy </h1>
+	<div>
+	  <h1 class="header-font"> <span class="header-letter">S</span>tudy <span class="header-letter">B</span>uddy </h1>
+	 </div>
+	 <br>
 
   <% if logged_in? %>
     <%= link_to current_teacher.name, teacher_path(current_teacher.id), class: "button" %>

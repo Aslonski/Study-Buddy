@@ -34,7 +34,7 @@ gem 'faker'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-#windows
+# Windows
 gem "tzinfo-data"
 
 group :development, :test do

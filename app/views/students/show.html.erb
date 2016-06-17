@@ -1,10 +1,15 @@
-<div class="main-section" id="student-info">
+<section class="user-section" id="student-info">
+  <div>
+    <img src="<%= @student.profile_pic %>">
+  </div>
   <h3>Name: <%= @student.full_name %></h3>
   <h3>Grade: <%= @student.grade %></h3>
   <h3>GPA: <%= @student.gpa %></h3>
   <h3>Disciplinary strikes: <%= @student.disciplinary_strikes %></h3>
   <h3>T-shirt size: <%= @student.shirt_size %></h3>
-  <h3>Teacher: <%= link_to @student.teacher.name, teacher_path(id: @student.teacher.id) %></h3>
+  <% if @student.teacher %>
+    <h3>Teacher: <%= link_to @student.teacher.name, teacher_path(id: @student.teacher.id) %></h3>
+  <% end %>
 
   <% if current_teacher.admin %>
     <%= link_to "Edit", edit_student_path, class: "button" %>
@@ -18,4 +23,4 @@
     <% end %>
   <% end %>
 
-</div>
+</section>

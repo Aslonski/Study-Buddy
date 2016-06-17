@@ -27,9 +27,8 @@
 
 /* ANDREY'S DELIGHTFUL TEMPLATE */
 .header-section {
-  background: white;
+  background: #08CFFF;
   max-width: 75%;
-  border: 2px solid black;
   text-align: center;
   max-height: 250px;
   margin-left: 15%;
@@ -43,7 +42,7 @@
 
 .main-section {
   max-width: 75%;
-  background-color: #D3D3D3;
+  background-color: transparent;
   margin: auto;
   text-align: center;
   padding-bottom: 20px;
@@ -51,16 +50,15 @@
 
 a {
   text-decoration: none;
-  color: #005FCC;
-
+  color: #FF7204;
 }
 
 a:hover {
-  color: red;
+  color: white;
 }
 
 .user-section {
-  background-color: #FFF;
+  background-color: transparent;
   max-width: 75%;
   margin: auto;
   padding: 15px;
@@ -80,19 +78,20 @@ section > a {
   padding: 5px;
 }
 
-.author {
+/*.author {
   font-size: 12px;
   color: #777;
 }
 
 .post {
  word-wrap: break-word;
-}
+}*/
 
 table, th, td {
   border: 1px solid black;
   border-collapse: collapse;
   -webkit-column-width: 150px;
+  border-color: #08CFFF;
 }
 
 th, td {
@@ -114,15 +113,16 @@ html {
 body {
   /*margin: 0 0 100px 50px;  bottom = footer height */
   padding: 0;
-  font-family: verdana;
-  background-color: #D3D3D3;
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+  background: url(choco-background.jpg);
+  color: white;
 }
 
 footer {
-  background-color: #aaaaaa;
+  background-color: #FF7204;
   border-top: 1px solid black;
   text-align: center;
-  position: absolute;
+  /*position: absolute;*/
   left: 0;
   bottom: 0;
   height: 75px;
@@ -138,21 +138,43 @@ ul {
 }
 
 .button {
-  font: bold 16px Verdana;
+  font: bold 22px Verdana;
   text-decoration: none;
-  background-color: #005FCC;
-  color: white;
+  background-color: #EB14A5;
+  color: #40260C;
   padding: 4px 6px 4px 6px;
+  margin-top: 10px;
   margin-left: 4px;
   margin-right: 4px;
-  border-top: 1px solid #CCCCCC;
-  border-right: 1px solid #333333;
-  border-bottom: 1px solid #333333;
-  border-left: 1px solid #CCCCCC;
+  border-top: 2px solid #CCCCCC;
+  border-right: 2px solid #333333;
+  border-bottom: 2px solid #333333;
+  border-left: 2px solid #CCCCCC;
+  border-radius: 15px;
 }
 
-#student-info {
+/*#student-info {
   width: 20%;
   text-align: left;
+}*/
+
+.header-font {
+  color: black;
+  font-family: "VintageOne";
+  font-weight: lighter;
+  font-size: 82px;
+  margin: 0px;
+  /*text-shadow: 2px, 2px, #FFF;*/
 }
+
+h4 {
+  color: black;
+}
+
+.header-letter {
+  color: #FF7204;
+  font-size: 91px;
+  /*text-shadow: 2px, 2px, #FFF;*/
+}
+
 

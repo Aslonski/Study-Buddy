@@ -1,3 +1,4 @@
+<section class="user-section">
 <%= form_for(@teacher) do |f| %>
   <% if @teacher.errors.any? %>
     <div id="error_explanation">
@@ -16,10 +17,12 @@
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :password %><br>
-    <%= f.password_field :password %>
+    <%= f.label :email %><br>
+    <%= f.email_field :email %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit 'Invite Teacher', :class => 'button'%>
+
   </div>
 <% end %>
+</section>  
