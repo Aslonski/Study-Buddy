@@ -20,6 +20,7 @@ class TeachersController < ApplicationController
     @teacher = Teacher.new(teacher_params)
     @teacher.password = "temp"
     if @teacher.save
+      TeacherMailer.account_activation(@teacher).deliver_now
       redirect_to admin_path
     else
       render "new"
