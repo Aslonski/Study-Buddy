@@ -49,6 +49,7 @@ class StudentsController < ApplicationController
   def select_multiple
     current_teacher.students.each do |student|
       student.teacher = nil
+      student.save
     end
     
     @students = Student.find(params[:student_ids])
