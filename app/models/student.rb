@@ -39,4 +39,16 @@ class Student < ActiveRecord::Base
       student.save
     end    
   end
+
+  def self.sort(students)
+    Student.sort_grade(students)
+  end
+
+  # def self.sort_name(students)
+  #   students.order(last_name: :asc, first_name: :asc, grade: :asc)
+  # end
+
+  def self.sort_grade(students)
+    students.order(grade: :asc, last_name: :asc, first_name: :asc)
+  end
 end

@@ -20,7 +20,7 @@
         <th>GPA</th>
         <th>Disciplinary Strikes</th>
       </tr>
-      <% @teacher.students.each do |student| %>
+      <% Student.sort(@teacher.students).each do |student| %>
         <tr>
           <td><%= counter %></td>
           <%= render partial: 'student_list', locals: {student: student} %>

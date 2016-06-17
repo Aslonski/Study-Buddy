@@ -13,7 +13,7 @@
 
   <h2>Delete Multiple Students</h2>
 
-  <%= render partial: "students/delete", locals: { students: Student.all } %>
+  <%= render partial: "students/delete", locals: { students: Student.sort(Student.all) } %>
   <br>
   <h2>Add New Student</h2>
 
