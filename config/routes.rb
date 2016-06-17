@@ -5,9 +5,10 @@ Rails.application.routes.draw do
   # resources :account_activations, only: [:edit]
 
   put "/students/:id/select" => "students#select", as: :select_student
-  resources :teachers, except: [:update]
+  resources :teachers
   resources :sessions, only: [:new, :create, :destroy]
   get "/admin" => "teachers#admin", as: :admin
+  get "/teachers/:id/edit_profile" => "teachers#edit_profile", as: :edit_teacher_profile
 
 
   # The priority is based upon order of creation: first created -> highest priority.

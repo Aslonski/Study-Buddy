@@ -65,6 +65,37 @@ class TeachersController < ApplicationController
     render "admin"
   end
 
+  def select_multiple
+    @teachers = Teacher.find(params[:teacher_ids])
+    @teachers.each do |teacher| 
+      teacher.teacher = current_teacher 
+      teacher.save
+    end
+    redirect_to teacher_path(id: current_teacher.id)
+  end
+
+  def delete_multiple
+    @teachers = Teacher.find(params[:teacher_ids])
+    @teachers.each { |teacher| teacher.destroy }
+    redirect_to teachers_path
+  end
+
+  def select
+    @teacher = find_teacher
+    @teacher.teacher = current_teacher
+    @teacher.save
+    redirect_to teacher_path
+  end
+
+  def edit_profile
+    @teacher = find_teacher
+    if @teacher.update(teacher_params)
+      redirect_to teacher_path
+    else
+      render "edit"
+    end
+  end
+
   private
 
   def find_teacher
@@ -72,7 +103,7 @@ class TeachersController < ApplicationController
   end
 
   def teacher_params
-    params.require(:teacher).permit(:name, :email)
+    params.require(:teacher).permit(:name, :email, :admin)
   end
 
 end

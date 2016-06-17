@@ -1,6 +1,10 @@
 <section class="user-section">
 <h1><%= @teacher.name %>'s Students</h1>
 
+<% if current_teacher.admin %>
+  <%= link_to "Edit Profile", edit_teacher_profile_path, class: "button" %><br><br>
+<% end %>
+
 <% if @teacher.students.length == 0 %>
   <div>
     <p>Welcome, <%= @teacher.name %>!  You currently have no students.</p>
@@ -25,4 +29,6 @@
     <% end %>
   </table>
 <% end %>
+
 </section>
+
