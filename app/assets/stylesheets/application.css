@@ -115,8 +115,8 @@ body {
   /*margin: 0 0 100px 50px;  bottom = footer height */
   padding: 0;
   font-family: "Comic Sans MS", "Comic Sans", cursive;
-  /*background: url(choco-background.jpg);*/
-  background-color: #391E15;
+  background: url(choco-background.jpg);
+  /*background-color: #391E15;*/
 
   color: white;
 }
