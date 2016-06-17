@@ -1,3 +1,4 @@
+<section class="user-section">
 <%= form_for(@teacher) do |f| %>
   <% if @teacher.errors.any? %>
     <div id="error_explanation">
@@ -20,6 +21,7 @@
     <%= f.password_field :password %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit 'Invite', :class => 'button' %>
   </div>
 <% end %>
+</section>  
