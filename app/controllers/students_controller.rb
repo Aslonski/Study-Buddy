@@ -17,17 +17,11 @@ class StudentsController < ApplicationController
   end
 
   def create
-    if params[:select]
-      select_multiple
-    elsif params[:delete] 
-      delete_multiple
+    @student = Student.new(student_params)
+    if @student.save
+      redirect_to students_path
     else
-      @student = Student.new(student_params)
-      if @student.save
-        redirect_to students_path
-      else
-        render "new"
-      end
+      render "new"
     end
   end
 
@@ -51,11 +45,11 @@ class StudentsController < ApplicationController
       student.teacher = nil
       student.save
     end
-    
+
     @students = Student.find(params[:student_ids])
 
-    @students.each do |student| 
-      student.teacher = current_teacher 
+    @students.each do |student|
+      student.teacher = current_teacher
       student.save
     end
     redirect_to teacher_path(id: current_teacher.id)
@@ -76,7 +70,7 @@ class StudentsController < ApplicationController
 
   def import
     Student.import(params[:file])
-    redirect_to students_path, notice: "Students imported." 
+    redirect_to students_path, notice: "Students imported."
   end
 
   private

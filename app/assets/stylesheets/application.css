@@ -63,6 +63,7 @@ a:hover {
   margin: auto;
   padding: 15px;
   border-radius: 10px;
+  margin-bottom: 5%;
 }
 
 .form-section {
@@ -122,11 +123,12 @@ footer {
   background-color: #FF7204;
   border-top: 1px solid black;
   text-align: center;
-  /*position: absolute;*/
+  position: fixed;
   left: 0;
   bottom: 0;
   height: 75px;
   width: 100%;
+  margin-top: 1%;
 }
 
 .errors {

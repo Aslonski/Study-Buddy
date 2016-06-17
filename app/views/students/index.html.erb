@@ -1,6 +1,6 @@
 <section class="user-section">
   <h2>All Students</h2>
-  <%= form_tag "/students" do %>
+  <%= form_tag "/students", method: :put do %>
     <table>
         <th></th>
         <th>Student Name</th>
@@ -14,13 +14,7 @@
       </tr>
     <% end %></table>
 
-    <%= submit_tag "Select Student(s)", name: :select, class: "button" %>
-
-    <% if current_teacher.admin %>
-      <div>
-        <%= submit_tag "Delete Student(s)", name: :delete, class: "button" %>
-      </div>
-    <% end %>
+    <%= submit_tag "Select Student(s)", name: :select_multiple, class: "button" %>
 
   <% end %>
 </section>
