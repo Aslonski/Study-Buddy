@@ -30,4 +30,15 @@ class Student < ActiveRecord::Base
   def grade=(grade)
     self[:grade] = (grade == "K" ? 0 : grade.to_i)
   end
+
+  def self.import(file)
+    spreadsheet = Roo::CSV.new(file.path, nil, :ignore)
+    header = spreadsheet.row(1)
+    (2..spreadsheet.last_row).each do |i|
+      row = Hash[[header, spreadsheet.row(i)].transpose]
+      student = find_or_initialize_by(first_name: row["first_name"], last_name: row["last_name"])
+      student.attributes = row.to_hash.slice(*accessible_attributes)
+      student.save
+    end
+  end
 end

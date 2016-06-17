@@ -18,7 +18,7 @@ describe Student do
   it { should validate_numericality_of(:age).only_integer }
   it { should validate_numericality_of(:grade).only_integer }
   it { should validate_numericality_of(:grade).is_less_than_or_equal_to(12) }
-  it { should validate_numericality_of(:grade).is_greater_than_or_equal_to(0) }
+  it { should validate_numericality_of(:grade).is_greater_than_or_equal_to(1) }
   it { should validate_numericality_of(:gpa).is_less_than_or_equal_to(4.0) }
   it { should validate_numericality_of(:gpa).is_greater_than_or_equal_to(0) }
   it { should validate_inclusion_of(:gpa).in_range(0..4) }

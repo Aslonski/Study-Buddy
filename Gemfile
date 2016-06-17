@@ -34,8 +34,11 @@ gem 'faker'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-#windows
+# Windows
 gem "tzinfo-data"
+
+# CSV
+gem "roo"
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.4'
