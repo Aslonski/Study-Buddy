@@ -21,11 +21,11 @@ RSpec.describe "Routing to teachers", :type => :routing do
     expect(:delete => "/teachers/1").to route_to("teachers#destroy", :id => "1")
   end
 
-  it "routes EDIT /teachers/1/edit to teachers#edit" do 
+  it "routes EDIT /teachers/1/edit to teachers#edit" do
     expect(:get => "/teachers/1/edit").to route_to("teachers#edit", :id => "1")
   end
 
-  it "routes UPDATE /teachers/id to teachers#update" do 
-    expect(:put => "/teachers/1").to_not be_routable
+  it "routes UPDATE /teachers/id to teachers#update" do
+    expect(:put => "/teachers/1").to route_to("teachers#update", :id => "1")
   end
 end

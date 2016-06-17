@@ -18,39 +18,22 @@ class TeachersController < ApplicationController
 
   def create
     @teacher = Teacher.new(teacher_params)
-      p "ABOUT TO SAVE"
-      p @teacher
     @teacher.password = "temp"
     if @teacher.save
-      p "============="
-      p @teacher
-      p "================"
       TeacherMailer.account_activation(@teacher).deliver_now
-      redirect_to root_path
+      redirect_to admin_path
     else
       render "new"
     end
   end
 
   def update
-    @teacher = Teacher.find_by(email: params[:email])
-    if @teacher && teacher.email_authenticated?(params[:id])
-      if @teacher.activated?
-        @teacher.update(activation_digest: "")
-        redirect_to root_path
-      else
-        flash[:warning] = "Account not activated.  Please contact your administrator."
-        redirect_to root_path
-      end
+    @teacher = find_teacher
+    if @teacher.update(teacher_params)
+      redirect_to teacher_path
     else
-      redirect_to root_path
+      render "edit"
     end
-
-    # if @teacher.update(teacher_params)
-    #   redirect_to teacher_path
-    # else
-    #   render "edit"
-    # end
   end
 
   def destroy

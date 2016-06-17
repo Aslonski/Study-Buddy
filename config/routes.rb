@@ -2,10 +2,10 @@ Rails.application.routes.draw do
   root "sessions#new"
   resources :students
 
-  # resources :account_activations, only: [:edit]
+  resources :account_activations, only: [:edit, :update]
 
   put "/students/:id/select" => "students#select", as: :select_student
-  resources :teachers, except: [:update]
+  resources :teachers
   resources :sessions, only: [:new, :create, :destroy]
   get "/admin" => "teachers#admin", as: :admin
   post "/import" => "students#import", as: :import_students
