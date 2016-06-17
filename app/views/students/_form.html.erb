@@ -1,3 +1,4 @@
+<section class="user-section">
 <%= form_for(@student) do |f| %>
   <% if @student.errors.any? %>
     <div id="error_explanation">
@@ -32,14 +33,15 @@
     <%= f.text_field :grade %>
   </div>
   <div class="field">
-    <%= f.label :shirt_size %><br>
+    <%= f.label :shirt_size %><br>  
     <%= f.text_field :shirt_size %>
   </div>
   <div class="field">
     <%= f.label :disciplinary_strikes %><br>
     <%= f.text_field :disciplinary_strikes %>
   </div>
-  <div class="actions">
-    <%= f.submit %>
+  <div class="action">
+    <%= f.submit 'Add', :class => 'button' %>
   </div>
 <% end %>
+</section>
