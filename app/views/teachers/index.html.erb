@@ -1,0 +1,15 @@
+<section class="user-section">
+  <h2>All Teachers</h2>
+  <%= form_tag "/teachers" do %>
+    <table>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Admin?</th>
+      <% @teachers.each do |teacher| %>
+        <tr>
+          <%= render partial: "teacher_list", locals: { teacher: teacher } %>
+        </tr>
+      <% end %>
+    </table>
+  <% end %>
+</section>
