@@ -23,13 +23,13 @@ class Student < ActiveRecord::Base
     first_name + " " + last_name
   end
 
-  def grade
-    self[:grade] == 0 ? "K" : self[:grade].to_s
-  end
+  # def grade
+  #   self[:grade] == 0 ? "K" : self[:grade].to_s
+  # end
 
-  def grade=(grade)
-    self[:grade] = (grade == "K" ? 0 : grade.to_i)
-  end
+  # def grade=(grade)
+  #   self[:grade] = (grade == "K" ? 0 : grade.to_i)
+  # end
 
   def self.import(file)
     CSV.foreach file.path, {headers: true, header_converters: :symbol} do |row|
