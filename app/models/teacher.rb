@@ -1,4 +1,4 @@
-  class Teacher < ActiveRecord::Base
+class Teacher < ActiveRecord::Base
 
   attr_accessor :activation_token
 
@@ -11,16 +11,18 @@
   validates :name, :email, presence: true
   validates_uniqueness_of :email
 
-  def email_authenticated?(token)
+  def email_authenticated?(act_token)
     digest = self.activation_digest
     return false if digest.nil?
-    Bcrypt::Password.new(digest).is_token?(token)
+    if BCrypt::Password.new(digest) == act_token
+      return true
+    end
   end
 
-  def is_token?(token)
-    BCrypt::Password.new(self.activation_digest) == token
+  def new_password(new_password)
+    self.password = new_password
+    self.save
   end
-
 
   private
   def Teacher.new_token

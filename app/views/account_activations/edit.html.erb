@@ -1,6 +1,6 @@
 <section class="user-section">
   <p id="register_message">Welcome to Study Buddy! Please enter a new password below to register.</p>
-  <%= form_for(@teacher) do |f| %>
+  <%= form_for @teacher, :url => url_for(:controller => 'account_activations', :action => "update") do |f| %>
     <% if @teacher.errors.any? %>
       <div id="error_explanation">
         <h2><%= pluralize(@teacher.errors.count, "error") %> prohibited this teacher from being saved:</h2>
