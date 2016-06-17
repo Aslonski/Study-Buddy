@@ -2,4 +2,4 @@
 
 <p>Use the link below to activate your account.</p>
 
-<p><%= link_to "Click here to activate!", edit_teacher_url(@teacher.activation_token, email: @teacher.email) %></p>
+<p><%= link_to "Click here to activate!", edit_account_activation_url(@teacher.activation_token, email: @teacher.email) %></p>

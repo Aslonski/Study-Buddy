@@ -20,7 +20,7 @@ class TeachersController < ApplicationController
     @teacher = Teacher.new(teacher_params)
     @teacher.password = "temp"
     if @teacher.save
-      redirect_to root_path
+      redirect_to admin_path
     else
       render "new"
     end
