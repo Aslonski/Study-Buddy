@@ -10,4 +10,8 @@ module ApplicationHelper
   def check_logged_in
     redirect_to root_path unless logged_in?
   end
+
+  def check_admin
+    redirect_to teacher_path(current_teacher) unless current_teacher.admin
+  end
 end

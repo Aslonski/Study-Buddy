@@ -1,5 +1,7 @@
 class TeachersController < ApplicationController
 
+  before_action :check_admin, only: [:edit, :create, :update, :destroy, :admin]
+
   def index
     @teachers = Teacher.all
   end
