@@ -5,6 +5,7 @@
       <th>Grade Level</th>
       <th>GPA</th>
       <th>Disciplinary Strikes</th>
+      <th>Teacher</th>
   <% students.each do |student| %>
     <tr>
       <td><%= check_box_tag "student_ids[]", student.id, false %></td>
