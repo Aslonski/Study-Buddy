@@ -37,8 +37,6 @@ class Student < ActiveRecord::Base
       student = find_or_initialize_by(first_name: row[:first_name], last_name: row[:last_name])
       student.attributes = { age: row[:age].to_i, gpa: row[:gpa].to_f, grade: row[:grade].to_i, disciplinary_strikes: row[:disciplinary_strikes].to_i, shirt_size: row[:shirt_size] }
       student.save
-
-      p student.errors
     end    
   end
 end
