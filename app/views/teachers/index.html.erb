@@ -1,0 +1,23 @@
+<section class="user-section">
+  <h2>All Teachers</h2>
+  <%= form_tag "/teachers" do %>
+    <table>
+      <th></th>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Admin?</th>
+      <% @teachers.each do |teacher| %>
+      <tr>
+        <td><%= check_box_tag "teacher_ids[]", teacher.id %></td>
+        <%= render partial: "teacher_list", locals: { teacher: teacher } %>
+      </tr>
+    <% end %></table>
+
+    <% if current_teacher.admin %>
+      <div>
+        <%= submit_tag "Delete Teacher(s)", name: :delete, class: "button" %>
+      </div>
+    <% end %>
+
+  <% end %>
+</section>
