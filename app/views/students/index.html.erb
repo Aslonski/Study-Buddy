@@ -1,26 +1,26 @@
 <section class="user-section">
-<h2>All Students</h2>
-<%= form_tag "/students" do %>
-  <table>
-      <th></th>
-      <th>Student Name</th>
-      <th>Grade Level</th>
-      <th>GPA</th>
-      <th>Disciplinary Strikes</th>
-  <% @students.each do |student| %>
-    <tr>
-      <td><%= check_box_tag "student_ids[]", student.id, student.teacher == current_teacher %></td>
-      <%= render partial: "student_list", locals: { student: student } %>
-    </tr>
-  <% end %></table>
+  <h2>All Students</h2>
+  <%= form_tag "/students" do %>
+    <table>
+        <th></th>
+        <th>Student Name</th>
+        <th>Grade Level</th>
+        <th>GPA</th>
+        <th>Disciplinary Strikes</th>
+    <% @students.each do |student| %>
+      <tr>
+        <td><%= check_box_tag "student_ids[]", student.id, student.teacher == current_teacher %></td>
+        <%= render partial: "student_list", locals: { student: student } %>
+      </tr>
+    <% end %></table>
 
-  <%= submit_tag "Select Student(s)", name: :select, class: "button" %>
+    <%= submit_tag "Select Student(s)", name: :select, class: "button" %>
 
-  <% if current_teacher.admin %>
-    <div>
-      <%= submit_tag "Delete Student(s)", name: :delete, class: "button" %>
-    </div>
+    <% if current_teacher.admin %>
+      <div>
+        <%= submit_tag "Delete Student(s)", name: :delete, class: "button" %>
+      </div>
+    <% end %>
+
   <% end %>
-
-<% end %>
 </section>

@@ -1,4 +1,4 @@
-<div class="main-section" id="student-info">
+<section class="user-section">
   <h2>Invite New Teacher</h2>
 
   <%= render "teachers/form" %>
@@ -7,12 +7,11 @@
 
   <%= form_tag import_students_path, multipart: true do %>
     <%= file_field_tag :file %>
-    <%= submit_tag "Import" %>
+    <%= submit_tag "Import", class: "button" %>
   <% end %>
 
   <h2>Add New Student</h2>
 
   <%= render "students/form" %>
 
-
-</div>
+</section>
