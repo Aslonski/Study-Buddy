@@ -1,8 +1,14 @@
 <h2>All Students</h2>
 <%= form_tag "/students" do %>
-  <table><% @students.each do |student| %>
+  <table>
+      <th></th>
+      <th>Student Name</th>
+      <th>Grade Level</th>
+      <th>GPA</th>
+      <th>Disciplinary Strikes</th>
+  <% @students.each do |student| %>
     <tr>
-      <td><%= check_box_tag "student_ids[]", student.id %></td>
+      <td><%= check_box_tag "student_ids[]", student.id, student.teacher == current_teacher %></td>
       <%= render partial: "student_list", locals: { student: student } %>
     </tr>
   <% end %></table>
