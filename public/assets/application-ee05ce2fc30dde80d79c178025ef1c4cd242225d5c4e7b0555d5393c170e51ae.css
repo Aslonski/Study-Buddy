@@ -1,0 +1,199 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+ */
+
+
+
+
+/* MIKE'S DELIGHTFUL COLOR SCHEME
+  electric blue: #72d3ca
+  hot pink: #f3719d
+  chocolate brown: #795b51
+  light brown: #a9887f;
+*/
+
+
+/* ANDREY'S DELIGHTFUL TEMPLATE */
+
+.header-section {
+  background: linear-gradient(#08CFFF, #FF7204);
+  max-width: 75%;
+  text-align: center;
+  max-height: 250px;
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-top: 1%;
+  margin-bottom: 5%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  border-radius: 10px;
+}
+
+.main-section {
+  max-width: 75%;
+  background-color: transparent;
+  margin: auto;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: #FF7204;
+}
+
+a:hover {
+  color: white;
+}
+
+.user-section {
+  text-align: center;
+  background-color: transparent;
+  max-width: 75%;
+  margin: auto;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 5%;
+}
+
+.form-section {
+  text-align: center;
+  background-color: #FFF;
+  max-width: 45%;
+  margin: auto;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+section > a {
+  padding: 5px;
+}
+
+/*.author {
+  font-size: 12px;
+  color: #777;
+}
+
+.post {
+ word-wrap: break-word;
+}*/
+
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  -webkit-column-width: 150px;
+  border-color: #08CFFF;
+}
+
+th, td {
+  margin-right: 10px;
+  padding: 10px;
+  text-align: left;
+}
+
+table {
+  margin:auto;
+}
+
+.wide-table {
+  width: 90%;
+  padding: auto;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  /*margin: 0 0 100px 50px;  bottom = footer height */
+  padding: 0;
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+  background: url(choco-background.jpg);
+  /*background-color: #391E15;*/
+  text-shadow: 1px 1px black;
+  font-size: 20px;
+  color: white;
+}
+
+footer {
+  background: linear-gradient(#FF7204, #08CFFF);
+  border-top: 1px solid black;
+  text-align: center;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  height: 75px;
+  width: 100%;
+  margin-top: 1%;
+}
+
+.errors {
+  color: red;
+}
+
+ul {
+  list-style: none;
+}
+
+.button {
+  font: bold 22px "Lakki Reddy";
+  text-decoration: none;
+  background-color: #EB14A5;
+  color: black;
+  padding: 4px 6px 4px 6px;
+  margin-top: 10px;
+  margin-left: 4px;
+  margin-right: 4px;
+  border-top: 2px solid #CCCCCC;
+  border-right: 2px solid #333333;
+  border-bottom: 2px solid #333333;
+  border-left: 2px solid #CCCCCC;
+  border-radius: 15px;
+}
+
+/*#student-info {
+  width: 20%;
+  text-align: left;
+}*/
+
+.header-font {
+  color: black;
+  font-family: "Lakki Reddy";
+  font-weight: lighter;
+  font-size: 82px;
+  margin: 0px;
+  /*text-shadow: 2px, 2px, #FFF;*/
+}
+
+h4 {
+  color: black;
+}
+
+.header-letter {
+  color: #FF7204;
+  font-size: 91px;
+  text-shadow: 3px 3px white;
+}
+
+h2 {
+  font-size: 36px;
+    color: #FF7204;
+    text-shadow: 4px 4px black;
+
+
+}
+
+
