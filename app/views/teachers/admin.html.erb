@@ -9,11 +9,12 @@
     <%= file_field_tag :file%>
     <%= submit_tag "Import CSV", class: "button" %>
   <% end %>
+  <br>
 
   <h2>Delete Multiple Students</h2>
 
   <%= render partial: "students/delete", locals: { students: Student.all } %>
-
+  <br>
   <h2>Add New Student</h2>
 
   <%= render "students/form" %>

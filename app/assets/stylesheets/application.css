@@ -27,7 +27,7 @@
 
 /* ANDREY'S DELIGHTFUL TEMPLATE */
 .header-section {
-  background: #08CFFF;
+  background: linear-gradient(#08CFFF, #FF7204);
   max-width: 75%;
   text-align: center;
   max-height: 250px;
@@ -58,6 +58,7 @@ a:hover {
 }
 
 .user-section {
+  text-align: center;
   background-color: transparent;
   max-width: 75%;
   margin: auto;
@@ -101,6 +102,10 @@ th, td {
   text-align: left;
 }
 
+table {
+  margin:auto;
+}
+
 .wide-table {
   width: 90%;
   padding: auto;
@@ -117,12 +122,13 @@ body {
   font-family: "Comic Sans MS", "Comic Sans", cursive;
   background: url(choco-background.jpg);
   /*background-color: #391E15;*/
-
+  text-shadow: 1px 1px black;
+  font-size: 20px;
   color: white;
 }
 
 footer {
-  background-color: #FF7204;
+  background: linear-gradient(#FF7204, #08CFFF);
   border-top: 1px solid black;
   text-align: center;
   position: fixed;
@@ -142,10 +148,10 @@ ul {
 }
 
 .button {
-  font: bold 22px Verdana;
+  font: bold 22px "Lakki Reddy";
   text-decoration: none;
   background-color: #EB14A5;
-  color: #40260C;
+  color: black;
   padding: 4px 6px 4px 6px;
   margin-top: 10px;
   margin-left: 4px;
@@ -164,7 +170,7 @@ ul {
 
 .header-font {
   color: black;
-  font-family: "VintageOne";
+  font-family: "Lakki Reddy";
   font-weight: lighter;
   font-size: 82px;
   margin: 0px;
@@ -178,7 +184,15 @@ h4 {
 .header-letter {
   color: #FF7204;
   font-size: 91px;
-  /*text-shadow: 2px, 2px, #FFF;*/
+  text-shadow: 3px 3px white;
+}
+
+h2 {
+  font-size: 36px;
+    color: #FF7204;
+    text-shadow: 4px 4px black;
+
+
 }
 
 
