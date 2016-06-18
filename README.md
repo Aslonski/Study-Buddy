@@ -27,8 +27,8 @@ A database for teachers to track students.
 * As any user... 
   * I want to be able to login.
 * Stretch:
-  * As an admin, I can convert a teacher to another admin.
-  * As an admin, I want to import a CSV.
-  * As a teacher, I want to add multiple students at once.
-  * As a user, I want it to have nice CSS.
+  * As an admin, I can convert a teacher to another admin. - Completed
+  * As an admin, I want to import a CSV. - Completed
+  * As a teacher, I want to add multiple students at once. - Completed
+  * As a user, I want it to have nice CSS. - Completed
   * As a user, I want to search for a student.
