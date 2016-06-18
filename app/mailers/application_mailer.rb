@@ -1,3 +1,3 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: ENV['SENDGRID_USERNAME']
+  default from: donotreply@studybuddy.com
 end
