@@ -1,3 +1,3 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: "donotreply@heroku.com"
+  default from: "donotreply@studybuddy.com"
 end
